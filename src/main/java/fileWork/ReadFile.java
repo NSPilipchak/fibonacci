@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ReadFile {
-    static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getRootLogger();
 
     private final ArrayList<String> arrayList = new ArrayList<>();
 

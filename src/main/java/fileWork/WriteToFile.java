@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class WriteToFile {
-    static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getRootLogger();
 
     public static void toFile(ArrayList<String> data) {
         logger.info("3. Store result to output.txt");
@@ -20,10 +20,10 @@ public class WriteToFile {
                 if (i != data.size() - 1)
                     bw.newLine();
             }
-        } catch (IOException e) {
-            logger.error("error message: " + e.getMessage());
-            logger.fatal("fatal error message: " + e.getMessage());
-            e.printStackTrace();
+        } catch (IOException ex) {
+            logger.error("error message: " + ex.getMessage());
+            logger.fatal("fatal error message: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 }

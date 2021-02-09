@@ -6,13 +6,13 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
 public class CheckArrayAccount implements CheckArray {
-    static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getRootLogger();
 
     @Override
     public void checkFibo(ArrayList<String> arrayList) {
         logger.info("1. lines based on Fibonacci sequence:");
         logger.info("Check with Fibonacci by the formula");
-        arrayList.removeIf(s -> !rowIsFibo(s));
+        arrayList.removeIf(row -> !rowIsFibo(row));
 
         if (logger.isInfoEnabled())
             logger.info(print(arrayList));
@@ -34,7 +34,7 @@ public class CheckArrayAccount implements CheckArray {
     }
 
     private static boolean isPerfectSquare(long n) {
-        final double root = Math.sqrt(n);                           // возвращаем квадратный корень числа
+        final double root = Math.sqrt(n);                           // return the square of number
         return Double.compare(root, Math.floor(root)) == 0;
     }
 }

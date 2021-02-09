@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
 public class Revers {
-    static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getRootLogger();
 
     public static void reversStringInArray(ArrayList<String> arrayList) {
         logger.info("2. Revers:");

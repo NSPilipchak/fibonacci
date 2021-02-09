@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
 public class CheckArrayGenerator implements CheckArray {
-    static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getRootLogger();
     private Fibonacci fibo;
 
     @Override
@@ -22,8 +22,8 @@ public class CheckArrayGenerator implements CheckArray {
     }
 
     private boolean rowIsFibo(String row) {
-        for (int i : fibo.getFibonacci()) {
-            if (digitOnlyFromRow(row) == i)
+        for (int num : fibo.getFibonacciArray()) {
+            if (digitOnlyFromRow(row) == num)
                 return true;
         }
         return false;

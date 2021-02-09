@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.Scanner;
 
 public class InputFile {
-    static final Logger logger = LogManager.getRootLogger();
+    private static final Logger logger = LogManager.getRootLogger();
     private String inputFile;
 
     public InputFile() {
