@@ -31,10 +31,10 @@ public class AppMain {
         ArrayList<String> data = rFile.getArrayList();
 
         //сhecking the received data
-        //Варинат №1 Проверяем ArrayList на соответсвие цифры в строке со сгенерированными числами Фибоначчи
+        //Option 1 Checking the ArrayList to see if the digit in the string matches the generated Fibonacci numbers
         CheckArray checkArray = new CheckArrayGenerator();
 
-        //Варинат №2 Проверяем ArrayList на соответсвие цифры в строке числу Фибоначчи по формуле
+        //Option 2 Checking ArrayList for correspondence of the number in the string to the Fibonacci number using the formula
 //        CheckArray checkArray = new CheckArrayAccount();
 
         checkArray.checkFibo(data);
