@@ -1,9 +1,17 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 class InputFile {
+    static final Logger logger = LogManager.getRootLogger();
     private String inputFile;
 
     InputFile() {
+        if (logger.isDebugEnabled()) {
+            logger.info("Logger: get input file");
+        }
+
         System.out.print("Path to input file, or press Enter for the default file (source.txt): ");
         Scanner scanner = new Scanner(System.in);
         inputFile = scanner.nextLine();

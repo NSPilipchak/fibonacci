@@ -1,9 +1,13 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class WriteToFile {
+    static final Logger logger = LogManager.getRootLogger();
 
     static void toFile(ArrayList<String> data) {
         String fileName = "output.txt";
@@ -14,6 +18,8 @@ public class WriteToFile {
                     bw.newLine();
             }
         } catch (IOException e) {
+            logger.error("error message: " + e.getMessage());
+            logger.fatal("fatal error message: " + e.getMessage());
             e.printStackTrace();
         }
     }

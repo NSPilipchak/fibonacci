@@ -1,11 +1,19 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
 public class AppMain {
+    static final Logger logger = LogManager.getRootLogger();
+
     public static void main(String[] args) {
         start();
     }
 
     private static void start() {
+        //debug
+        if (logger.isDebugEnabled()) {
+            logger.debug("Logger: In debug message");
+        }
         //получаем путь к файлу, либо грузим дефолтно
         InputFile inputFile = new InputFile();
 
