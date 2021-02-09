@@ -11,9 +11,9 @@ import java.util.ArrayList;
 public class WriteToFile {
     private static final Logger logger = LogManager.getRootLogger();
 
-    public static void toFile(ArrayList<String> data) {
-        logger.info("3. Store result to output.txt");
-        String fileName = "output.txt";
+    public static void toFile(ArrayList<String> data, String fileName) {
+        fileName = fileName.length() == 0 ? "output.txt" : fileName;
+        logger.info("3. Store result to " + fileName);
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, false))) {
             for (int i = 0; i < data.size(); i++) {
                 bw.write(data.get(i));
