@@ -11,8 +11,8 @@ public class CheckArrayGenerator implements CheckArray {
 
     @Override
     public void checkFibo(ArrayList<String> arrayList) {
-        logger.info("Number check selected with Fibonacci number generator");
         logger.info("1. lines based on Fibonacci sequence:");
+        logger.info("Check with Fibonacci number generator");
         fibo = new Fibonacci();
         fibo.init();
         arrayList.removeIf(s -> !rowIsFibo(s));

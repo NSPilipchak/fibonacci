@@ -9,14 +9,14 @@ public class Revers {
     static final Logger logger = LogManager.getRootLogger();
 
     public static void reversStringInArray(ArrayList<String> arrayList) {
-        logger.info("2. blogic.Revers:");
-        logger.debug("reversStringInArray - input array: " + arrayList.toString());
+        logger.info("2. Revers:");
+        logger.info("reversStringInArray - input array: " + arrayList.toString());
 
         for (int i = 0; i < arrayList.size(); i++) {
             arrayList.set(i, revers(arrayList.get(i)));
         }
 
-        logger.debug("reversStringInArray - output array: " + arrayList.toString());
+        logger.info("reversStringInArray - output array: " + arrayList.toString());
     }
 
     private static String revers(String str) {

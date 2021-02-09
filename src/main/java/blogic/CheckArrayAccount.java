@@ -10,8 +10,8 @@ public class CheckArrayAccount implements CheckArray {
 
     @Override
     public void checkFibo(ArrayList<String> arrayList) {
-        logger.info("Selected to check the number for compliance with blogic.Fibonacci by the formula");
         logger.info("1. lines based on Fibonacci sequence:");
+        logger.info("Check with Fibonacci by the formula");
         arrayList.removeIf(s -> !rowIsFibo(s));
 
         if (logger.isInfoEnabled())
