@@ -1,13 +1,15 @@
+package fileWork;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
 
-class InputFile {
+public class InputFile {
     static final Logger logger = LogManager.getRootLogger();
     private String inputFile;
 
-    InputFile() {
+    public InputFile() {
         if (logger.isDebugEnabled()) {
             logger.info("Logger: get input file");
         }
@@ -19,7 +21,7 @@ class InputFile {
             inputFile = "source.txt";
     }
 
-    String getInputFile() {
+    public String getInputFile() {
         return inputFile;
     }
 }

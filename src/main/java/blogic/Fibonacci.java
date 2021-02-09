@@ -1,4 +1,10 @@
+package blogic;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Fibonacci {
+    static final Logger logger = LogManager.getRootLogger();
     private int[] fibonacci;
     private int size = 47;  //int позволяет хранить 32 битное целочисленое значение (от -2147883648 до 2147883647)
 
@@ -12,6 +18,8 @@ public class Fibonacci {
         for (int i = 2; i < size; ++i) {
             fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
         }
+
+        logger.info(toString());
     }
 
     public String toString() {
@@ -24,21 +32,7 @@ public class Fibonacci {
         return ret.toString();
     }
 
-    static boolean isFibonacci(long num) {
-        final long fiveTimesSquare = 5 * num * num;
-        return isPerfectSquare(fiveTimesSquare + 4) || isPerfectSquare(fiveTimesSquare - 4);
-    }
-
-    private static boolean isPerfectSquare(long n) {
-        final double root = Math.sqrt(n);                           // возвращаем квадратный корень числа
-        return Double.compare(root, Math.floor(root)) == 0;
-    }
-
     public int[] getFibonacci() {
         return fibonacci;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
     }
 }
