@@ -30,8 +30,8 @@ public class AppMain {
         //get array from file
         ArrayList<String> data = rFile.getArrayList();
 
-        //Проверяем полученные данные на соответсвие числу Фибоначчи
-        //Варинат №1 Проверяем ArrayList на соответсвие цифры в строке со сгенерированніми числами Фибоначчи
+        //сhecking the received data
+        //Варинат №1 Проверяем ArrayList на соответсвие цифры в строке со сгенерированными числами Фибоначчи
         CheckArray checkArray = new CheckArrayGenerator();
 
         //Варинат №2 Проверяем ArrayList на соответсвие цифры в строке числу Фибоначчи по формуле
